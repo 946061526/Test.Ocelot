@@ -30,7 +30,27 @@
       "UpstreamHttpMethod": [ "Get", "Post" ]
       //"ServiceName": "order", //consul中的api的service名称
       //"UseServiceDiscovery": true //启用服务发现
-    }
+    },
+    {
+      "DownstreamPathTemplate": "/{url}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5050
+        }
+      ],
+      "UpstreamPathTemplate": "/AuthenticationAPI/{url}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "ReRouteIsCaseSensitive": true,
+      "HttpHandlerOptions": {
+        "UseTracing": true
+      },
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "BenBearer",
+        "AllowedScopes": []
+      }
+    },
   ],
   "GlobalConfiguration": {
     "BaseUrl": "http://localhost:9123",

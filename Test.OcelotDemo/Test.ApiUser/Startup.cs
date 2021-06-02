@@ -25,6 +25,12 @@ namespace Test.ApiUser
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //读取配置文件，注入OcelotJwt策略
+            var audienceConfig = Configuration.GetSection("Audience");
+            services.AddOcelotPolicyJwtBearer(audienceConfig["Issuer"], audienceConfig["Audience"],
+                audienceConfig["Secret"], "BenBearer", "AuthJWT", audienceConfig["OpenJWT"]);
+
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 

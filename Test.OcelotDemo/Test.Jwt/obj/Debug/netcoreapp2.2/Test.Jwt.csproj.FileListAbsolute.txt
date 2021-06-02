@@ -1,0 +1,17 @@
+D:\MyGit\Test.Ocelot\Test.OcelotDemo\Test.Jwt\bin\Debug\netcoreapp2.2\appsettings.Development.json
+D:\MyGit\Test.Ocelot\Test.OcelotDemo\Test.Jwt\bin\Debug\netcoreapp2.2\appsettings.json
+D:\MyGit\Test.Ocelot\Test.OcelotDemo\Test.Jwt\bin\Debug\netcoreapp2.2\Test.Jwt.deps.json
+D:\MyGit\Test.Ocelot\Test.OcelotDemo\Test.Jwt\bin\Debug\netcoreapp2.2\Test.Jwt.runtimeconfig.json
+D:\MyGit\Test.Ocelot\Test.OcelotDemo\Test.Jwt\bin\Debug\netcoreapp2.2\Test.Jwt.runtimeconfig.dev.json
+D:\MyGit\Test.Ocelot\Test.OcelotDemo\Test.Jwt\bin\Debug\netcoreapp2.2\Test.Jwt.dll
+D:\MyGit\Test.Ocelot\Test.OcelotDemo\Test.Jwt\bin\Debug\netcoreapp2.2\Test.Jwt.pdb
+D:\MyGit\Test.Ocelot\Test.OcelotDemo\Test.Jwt\obj\Debug\netcoreapp2.2\Test.Jwt.AssemblyInfoInputs.cache
+D:\MyGit\Test.Ocelot\Test.OcelotDemo\Test.Jwt\obj\Debug\netcoreapp2.2\Test.Jwt.AssemblyInfo.cs
+D:\MyGit\Test.Ocelot\Test.OcelotDemo\Test.Jwt\obj\Debug\netcoreapp2.2\Test.Jwt.csproj.CoreCompileInputs.cache
+D:\MyGit\Test.Ocelot\Test.OcelotDemo\Test.Jwt\obj\Debug\netcoreapp2.2\Test.Jwt.RazorAssemblyInfo.cache
+D:\MyGit\Test.Ocelot\Test.OcelotDemo\Test.Jwt\obj\Debug\netcoreapp2.2\Test.Jwt.RazorAssemblyInfo.cs
+D:\MyGit\Test.Ocelot\Test.OcelotDemo\Test.Jwt\obj\Debug\netcoreapp2.2\Test.Jwt.RazorTargetAssemblyInfo.cache
+D:\MyGit\Test.Ocelot\Test.OcelotDemo\Test.Jwt\obj\Debug\netcoreapp2.2\Test.Jwt.dll
+D:\MyGit\Test.Ocelot\Test.OcelotDemo\Test.Jwt\obj\Debug\netcoreapp2.2\Test.Jwt.pdb
+D:\MyGit\Test.Ocelot\Test.OcelotDemo\Test.Jwt\obj\Debug\netcoreapp2.2\Test.Jwt.genruntimeconfig.cache
+D:\MyGit\Test.Ocelot\Test.OcelotDemo\Test.Jwt\obj\Debug\netcoreapp2.2\Test.Jwt.csprojAssemblyReference.cache

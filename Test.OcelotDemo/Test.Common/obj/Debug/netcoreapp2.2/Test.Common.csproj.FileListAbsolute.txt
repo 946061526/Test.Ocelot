@@ -1,0 +1,9 @@
+D:\MyGit\Test.Ocelot\Test.OcelotDemo\Test.Common\bin\Debug\netcoreapp2.2\Test.Common.deps.json
+D:\MyGit\Test.Ocelot\Test.OcelotDemo\Test.Common\bin\Debug\netcoreapp2.2\Test.Common.dll
+D:\MyGit\Test.Ocelot\Test.OcelotDemo\Test.Common\bin\Debug\netcoreapp2.2\Test.Common.pdb
+D:\MyGit\Test.Ocelot\Test.OcelotDemo\Test.Common\obj\Debug\netcoreapp2.2\Test.Common.AssemblyInfoInputs.cache
+D:\MyGit\Test.Ocelot\Test.OcelotDemo\Test.Common\obj\Debug\netcoreapp2.2\Test.Common.AssemblyInfo.cs
+D:\MyGit\Test.Ocelot\Test.OcelotDemo\Test.Common\obj\Debug\netcoreapp2.2\Test.Common.csproj.CoreCompileInputs.cache
+D:\MyGit\Test.Ocelot\Test.OcelotDemo\Test.Common\obj\Debug\netcoreapp2.2\Test.Common.dll
+D:\MyGit\Test.Ocelot\Test.OcelotDemo\Test.Common\obj\Debug\netcoreapp2.2\Test.Common.pdb
+D:\MyGit\Test.Ocelot\Test.OcelotDemo\Test.Common\obj\Debug\netcoreapp2.2\Test.Common.csprojAssemblyReference.cache
