@@ -15,4 +15,8 @@
 	  <PackageReference Include="Ocelot" Version="13.5.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Test.Common\Test.Common.csproj" />
+  </ItemGroup>
+
 </Project>

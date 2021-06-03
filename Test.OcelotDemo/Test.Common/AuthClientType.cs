@@ -6,17 +6,17 @@ namespace Test.Common
     public enum AuthClientType
     {
         /// <summary>
-        /// SAAS后台
+        /// web站点
         /// </summary>
         Web = 1,
 
         /// <summary>
-        /// C端小程序
+        /// 微信等
         /// </summary>
         Wehcat = 2,
 
         /// <summary>
-        /// B端App
+        /// App
         /// </summary>
         App = 3
     }

@@ -1,19 +1,11 @@
-﻿//using Microsoft.AspNetCore.Authentication;
-//using Microsoft.AspNetCore.Authorization;
-//using Microsoft.Extensions.DependencyInjection;
-//using Microsoft.IdentityModel.Tokens;
-//using System;
-//using System.Collections.Generic;
-//using System.Text;
-
-using Microsoft.AspNetCore.Authentication;
-   using Microsoft.AspNetCore.Authorization;
-   using Microsoft.Extensions.DependencyInjection;
-   using Microsoft.IdentityModel.Tokens;
-  using System;
-   using System.Collections.Generic;
-   using System.Security.Claims;
-   using System.Text;
+﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.IdentityModel.Tokens;
+using System;
+using System.Collections.Generic;
+using System.Security.Claims;
+using System.Text;
 
 namespace Test.Common
 {
@@ -101,7 +93,7 @@ namespace Test.Common
             //注入授权Handler
             services.AddSingleton<IAuthorizationHandler, PermissionHandler>();
             services.AddSingleton(permissionRequirement);
-            return services.AddAuthorizationCore(options =>
+            return services.AddAuthorization(options =>
             {
                 options.AddPolicy(policyName,
                 policy => policy.Requirements.Add(permissionRequirement));

@@ -5,12 +5,16 @@ D:\MyGit\Test.Ocelot\Test.OcelotDemo\AuthenticationAPI\bin\Debug\netcoreapp2.2\A
 D:\MyGit\Test.Ocelot\Test.OcelotDemo\AuthenticationAPI\bin\Debug\netcoreapp2.2\AuthenticationAPI.runtimeconfig.dev.json
 D:\MyGit\Test.Ocelot\Test.OcelotDemo\AuthenticationAPI\bin\Debug\netcoreapp2.2\AuthenticationAPI.dll
 D:\MyGit\Test.Ocelot\Test.OcelotDemo\AuthenticationAPI\bin\Debug\netcoreapp2.2\AuthenticationAPI.pdb
+D:\MyGit\Test.Ocelot\Test.OcelotDemo\AuthenticationAPI\bin\Debug\netcoreapp2.2\Test.Common.dll
+D:\MyGit\Test.Ocelot\Test.OcelotDemo\AuthenticationAPI\bin\Debug\netcoreapp2.2\Test.Common.pdb
+D:\MyGit\Test.Ocelot\Test.OcelotDemo\AuthenticationAPI\obj\Debug\netcoreapp2.2\AuthenticationAPI.csprojAssemblyReference.cache
 D:\MyGit\Test.Ocelot\Test.OcelotDemo\AuthenticationAPI\obj\Debug\netcoreapp2.2\AuthenticationAPI.AssemblyInfoInputs.cache
 D:\MyGit\Test.Ocelot\Test.OcelotDemo\AuthenticationAPI\obj\Debug\netcoreapp2.2\AuthenticationAPI.AssemblyInfo.cs
 D:\MyGit\Test.Ocelot\Test.OcelotDemo\AuthenticationAPI\obj\Debug\netcoreapp2.2\AuthenticationAPI.csproj.CoreCompileInputs.cache
 D:\MyGit\Test.Ocelot\Test.OcelotDemo\AuthenticationAPI\obj\Debug\netcoreapp2.2\AuthenticationAPI.RazorAssemblyInfo.cache
 D:\MyGit\Test.Ocelot\Test.OcelotDemo\AuthenticationAPI\obj\Debug\netcoreapp2.2\AuthenticationAPI.RazorAssemblyInfo.cs
 D:\MyGit\Test.Ocelot\Test.OcelotDemo\AuthenticationAPI\obj\Debug\netcoreapp2.2\AuthenticationAPI.RazorTargetAssemblyInfo.cache
+D:\MyGit\Test.Ocelot\Test.OcelotDemo\AuthenticationAPI\obj\Debug\netcoreapp2.2\AuthenticationAPI.csproj.CopyComplete
 D:\MyGit\Test.Ocelot\Test.OcelotDemo\AuthenticationAPI\obj\Debug\netcoreapp2.2\AuthenticationAPI.dll
 D:\MyGit\Test.Ocelot\Test.OcelotDemo\AuthenticationAPI\obj\Debug\netcoreapp2.2\AuthenticationAPI.pdb
 D:\MyGit\Test.Ocelot\Test.OcelotDemo\AuthenticationAPI\obj\Debug\netcoreapp2.2\AuthenticationAPI.genruntimeconfig.cache
