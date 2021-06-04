@@ -1,0 +1,8 @@
+D:\MyGit\GatewayJwtDemo\GatewayJwtDemo\Common\bin\Debug\netcoreapp3.1\Common.deps.json
+D:\MyGit\GatewayJwtDemo\GatewayJwtDemo\Common\bin\Debug\netcoreapp3.1\Common.dll
+D:\MyGit\GatewayJwtDemo\GatewayJwtDemo\Common\bin\Debug\netcoreapp3.1\Common.pdb
+D:\MyGit\GatewayJwtDemo\GatewayJwtDemo\Common\obj\Debug\netcoreapp3.1\Common.AssemblyInfoInputs.cache
+D:\MyGit\GatewayJwtDemo\GatewayJwtDemo\Common\obj\Debug\netcoreapp3.1\Common.AssemblyInfo.cs
+D:\MyGit\GatewayJwtDemo\GatewayJwtDemo\Common\obj\Debug\netcoreapp3.1\Common.csproj.CoreCompileInputs.cache
+D:\MyGit\GatewayJwtDemo\GatewayJwtDemo\Common\obj\Debug\netcoreapp3.1\Common.dll
+D:\MyGit\GatewayJwtDemo\GatewayJwtDemo\Common\obj\Debug\netcoreapp3.1\Common.pdb
