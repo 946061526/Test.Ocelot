@@ -1,4 +1,5 @@
 using Common;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -28,8 +29,7 @@ namespace UserApi
             //读取配置文件，注入OcelotJwt策略
             var audienceConfig = Configuration.GetSection("Audience");
             services.AddOcelotPolicyJwtBearer(audienceConfig["Issuer"], audienceConfig["Audience"],
-                audienceConfig["Secret"], "BenBearer", "AuthJWT", audienceConfig["OpenJWT"]);
-
+                audienceConfig["Secret"], "Bearer", "AuthJWT", audienceConfig["OpenJWT"]);
 
             services.AddControllers();
         }
@@ -44,6 +44,7 @@ namespace UserApi
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

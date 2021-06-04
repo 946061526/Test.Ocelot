@@ -43,58 +43,16 @@ namespace AuthenticationAPI.Controllers
             .ToArray();
         }
 
+
+
         [Route("login")]
         [AllowAnonymous]
         [HttpPost]
-        public ActionResult<ApiResult> login([FromBody] dynamic obj)
+        public ActionResult<ApiResult> login([FromQuery] Req obj)
         {
-
-            //AuthService ser = new AuthService();
-            //ApiResult result = ser.AccessAuthorization(obj);
-
-
-            //if (result.StatusCode != 200)
-            //{
-            //    return ReturnOperterResult(result.StatusCode, result.Msg, null, result.Msg);
-            //}
-            //else
-            //{
-            //    string username = ((AccessInfo)result.Data).UserName;
-            //    string userid = ((AccessInfo)result.Data).UserId.ToString();
-            //    string OrgId = ((AccessInfo)result.Data).OrgId.ToString();
-            //    string OrgName = ((AccessInfo)result.Data).OrgName.ToString();
-            //    string IsAdmin = ((AccessInfo)result.Data).IsAdmin.ToString();
-            //    string ClientType = ((AccessInfo)result.Data).ClientType.ToString();
-            //    //如果是基于用户的授权策略，这里要添加用户;如果是基于角色的授权策略，这里要添加角色
-            //    var claims = new Claim[] {
-            //        new Claim("userName", username),
-            //        new Claim("clientType",ClientType.ToString()),
-            //        new Claim("userid",userid),
-            //        new Claim("jti",Guid.NewGuid().ToString()),
-            //        new Claim("orgId",OrgId),
-            //        new Claim("orgName",OrgName),
-            //        new Claim("isAdmin",IsAdmin)
-            //    };
-            //    //用户标识
-            //    var identity = new ClaimsIdentity(JwtBearerDefaults.AuthenticationScheme);
-            //    identity.AddClaims(claims);
-            //    var token = JwtToken.BuildJwtToken(claims, _requirement, (AuthClientType)(Convert.ToInt32(ClientType)));
-            //    return ReturnOperterResult(200, "认证成功",
-            //        new
-            //        {
-            //            Token = token,
-            //            UserId = Convert.ToInt32(userid),
-            //            UserName = username,
-            //            OrgId = Convert.ToInt32(OrgId),
-            //            OrgName = OrgName,
-            //            IsAdmin = Convert.ToBoolean(IsAdmin),
-            //            ClientType = Convert.ToInt32(ClientType)
-            //        });
-            //}
-
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-            var _requirement = new PermissionRequirement("Benjamin", "everone", creds, "True") { };
+            var _requirement = new PermissionRequirement("Vim", "everyone", creds, "True") { };
 
             string username = obj.UserName.ToString();
             string userid = obj.UserId.ToString();
@@ -134,5 +92,49 @@ namespace AuthenticationAPI.Controllers
                 }
             };
         }
+
+        [Route("login2")]
+        [AllowAnonymous]
+        [HttpGet]
+        public ActionResult<ApiResult> login([FromQuery] string userName, string pwd, int ClientType)
+        {
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"));
+            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+            var _requirement = new PermissionRequirement("Vim", "everyone", creds, "True") { };
+
+            var claims = new Claim[] {
+                    new Claim("userName", userName),
+                    new Claim("clientType",ClientType.ToString()),
+                    new Claim("pwd",pwd),
+                    new Claim("jti",Guid.NewGuid().ToString()),
+                };
+            //用户标识
+            var identity = new ClaimsIdentity(JwtBearerDefaults.AuthenticationScheme);
+            identity.AddClaims(claims);
+            var token = JwtToken.BuildJwtToken(claims, _requirement, (AuthClientType)(Convert.ToInt32(ClientType)));
+
+
+            return new ApiResult
+            {
+                code = 200,
+                msg = "ok",
+                data = new
+                {
+                    Token = token,
+                    UserName = userName,
+                    ClientType = ClientType
+                }
+            };
+        }
+    }
+
+    public class Req
+    {
+        public int UserId { get; set; }
+        public string UserName { get; set; }
+        public int OrgId { get; set; }
+        public string OrgName { get; set; }
+        public string IsAdmin { get; set; }
+        public int ClientType { get; set; }
     }
 }

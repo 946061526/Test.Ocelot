@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "t4R5YmpWt5Kd0yqShUltUHaK+KBNkVh+7BjhpkBc/ifCJP5ufFnBXFbgdwcsIZYI+JEfGDX1R1m4kGEWyBcltg==",
+  "dgSpecHash": "mrLvjvKFP2098JJh4jeUrNbUBPoj1dq6C4/KEsrZ/j6w3ZU/KH8mRMTEu3lwYg+L2u1QQWXCvRKnUv7WZBxCLg==",
   "success": true,
-  "projectFilePath": "D:\\MyGit\\GatewayJwtDemo\\GatewayJwtDemo\\AuthenticationAPI\\AuthenticationAPI.csproj",
+  "projectFilePath": "D:\\MyGit\\Test.Ocelot\\GatewayJwtDemo\\AuthenticationAPI\\AuthenticationAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dev1\\.nuget\\packages\\fluentvalidation\\8.4.0\\fluentvalidation.8.4.0.nupkg.sha512",
     "C:\\Users\\dev1\\.nuget\\packages\\microsoft.aspnetcore\\2.2.0\\microsoft.aspnetcore.2.2.0.nupkg.sha512",

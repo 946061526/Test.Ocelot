@@ -40,14 +40,14 @@
           "Port": 5050
         }
       ],
-      "UpstreamPathTemplate": "/AuthenticationAPI/{url}",
+      "UpstreamPathTemplate": "/api/AuthenticationAPI/{url}",
       "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
       "ReRouteIsCaseSensitive": true,
       "HttpHandlerOptions": {
         "UseTracing": true
       },
       "AuthenticationOptions": {
-        "AuthenticationProviderKey": "BenBearer",
+        "AuthenticationProviderKey": "Bearer",
         "AllowedScopes": []
       }
     },

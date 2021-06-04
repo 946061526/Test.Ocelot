@@ -7867,11 +7867,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\MyGit\\GatewayJwtDemo\\GatewayJwtDemo\\OrderApi\\OrderApi.csproj",
+      "projectUniqueName": "D:\\MyGit\\Test.Ocelot\\GatewayJwtDemo\\OrderApi\\OrderApi.csproj",
       "projectName": "OrderApi",
-      "projectPath": "D:\\MyGit\\GatewayJwtDemo\\GatewayJwtDemo\\OrderApi\\OrderApi.csproj",
+      "projectPath": "D:\\MyGit\\Test.Ocelot\\GatewayJwtDemo\\OrderApi\\OrderApi.csproj",
       "packagesPath": "C:\\Users\\dev1\\.nuget\\packages\\",
-      "outputPath": "D:\\MyGit\\GatewayJwtDemo\\GatewayJwtDemo\\OrderApi\\obj\\",
+      "outputPath": "D:\\MyGit\\Test.Ocelot\\GatewayJwtDemo\\OrderApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -7894,8 +7894,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\MyGit\\GatewayJwtDemo\\GatewayJwtDemo\\Common\\Common.csproj": {
-              "projectPath": "D:\\MyGit\\GatewayJwtDemo\\GatewayJwtDemo\\Common\\Common.csproj"
+            "D:\\MyGit\\Test.Ocelot\\GatewayJwtDemo\\Common\\Common.csproj": {
+              "projectPath": "D:\\MyGit\\Test.Ocelot\\GatewayJwtDemo\\Common\\Common.csproj"
             }
           }
         }

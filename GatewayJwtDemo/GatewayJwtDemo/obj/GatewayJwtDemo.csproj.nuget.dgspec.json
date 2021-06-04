@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\MyGit\\GatewayJwtDemo\\GatewayJwtDemo\\GatewayJwtDemo\\GatewayJwtDemo.csproj": {}
+    "D:\\MyGit\\Test.Ocelot\\GatewayJwtDemo\\GatewayJwtDemo\\GatewayJwtDemo.csproj": {}
   },
   "projects": {
-    "D:\\MyGit\\GatewayJwtDemo\\GatewayJwtDemo\\GatewayJwtDemo\\GatewayJwtDemo.csproj": {
+    "D:\\MyGit\\Test.Ocelot\\GatewayJwtDemo\\GatewayJwtDemo\\GatewayJwtDemo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MyGit\\GatewayJwtDemo\\GatewayJwtDemo\\GatewayJwtDemo\\GatewayJwtDemo.csproj",
+        "projectUniqueName": "D:\\MyGit\\Test.Ocelot\\GatewayJwtDemo\\GatewayJwtDemo\\GatewayJwtDemo.csproj",
         "projectName": "GatewayJwtDemo",
-        "projectPath": "D:\\MyGit\\GatewayJwtDemo\\GatewayJwtDemo\\GatewayJwtDemo\\GatewayJwtDemo.csproj",
+        "projectPath": "D:\\MyGit\\Test.Ocelot\\GatewayJwtDemo\\GatewayJwtDemo\\GatewayJwtDemo.csproj",
         "packagesPath": "C:\\Users\\dev1\\.nuget\\packages\\",
-        "outputPath": "D:\\MyGit\\GatewayJwtDemo\\GatewayJwtDemo\\GatewayJwtDemo\\obj\\",
+        "outputPath": "D:\\MyGit\\Test.Ocelot\\GatewayJwtDemo\\GatewayJwtDemo\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

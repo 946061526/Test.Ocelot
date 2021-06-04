@@ -6,3 +6,11 @@ D:\MyGit\GatewayJwtDemo\GatewayJwtDemo\Common\obj\Debug\netcoreapp3.1\Common.Ass
 D:\MyGit\GatewayJwtDemo\GatewayJwtDemo\Common\obj\Debug\netcoreapp3.1\Common.csproj.CoreCompileInputs.cache
 D:\MyGit\GatewayJwtDemo\GatewayJwtDemo\Common\obj\Debug\netcoreapp3.1\Common.dll
 D:\MyGit\GatewayJwtDemo\GatewayJwtDemo\Common\obj\Debug\netcoreapp3.1\Common.pdb
+D:\MyGit\Test.Ocelot\GatewayJwtDemo\Common\bin\Debug\netcoreapp3.1\Common.deps.json
+D:\MyGit\Test.Ocelot\GatewayJwtDemo\Common\bin\Debug\netcoreapp3.1\Common.dll
+D:\MyGit\Test.Ocelot\GatewayJwtDemo\Common\bin\Debug\netcoreapp3.1\Common.pdb
+D:\MyGit\Test.Ocelot\GatewayJwtDemo\Common\obj\Debug\netcoreapp3.1\Common.AssemblyInfoInputs.cache
+D:\MyGit\Test.Ocelot\GatewayJwtDemo\Common\obj\Debug\netcoreapp3.1\Common.AssemblyInfo.cs
+D:\MyGit\Test.Ocelot\GatewayJwtDemo\Common\obj\Debug\netcoreapp3.1\Common.csproj.CoreCompileInputs.cache
+D:\MyGit\Test.Ocelot\GatewayJwtDemo\Common\obj\Debug\netcoreapp3.1\Common.dll
+D:\MyGit\Test.Ocelot\GatewayJwtDemo\Common\obj\Debug\netcoreapp3.1\Common.pdb

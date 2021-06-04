@@ -12,7 +12,7 @@ namespace Common
         /// <summary>
         /// 请求路径
         /// </summary>
-        public string LoginPath { get; set; } = "/api/Auth/Login";
+        public string LoginPath { get; set; } = "/api/AuthenticationAPI/Login";
         /// <summary>
         /// 发行人
         /// </summary>

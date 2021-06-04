@@ -23,7 +23,7 @@ namespace AuthenticationAPI
 
             services.AddJTokenBuild(audienceConfig["Issuer"], audienceConfig["Audience"], audienceConfig["Secret"]);
             services.AddOcelotPolicyJwtBearer(audienceConfig["Issuer"], audienceConfig["Audience"],
-                audienceConfig["Secret"], "BenBearer", "AuthJWT", audienceConfig["OpenJWT"]);
+                audienceConfig["Secret"], "Bearer", "AuthJWT", audienceConfig["OpenJWT"]);
 
             services.AddControllers();
         }

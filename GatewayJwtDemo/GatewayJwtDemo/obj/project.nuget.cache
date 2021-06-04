@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hyj3X/PKQCnZ6FmnfFSFUor9JL0Gx1VKCXH1S3adM+KYt8tbqfkubvjHP/bvYUH5+z2QAE+s+0+nI2Rz1dvPKg==",
+  "dgSpecHash": "QT8u+D/7Jz82NL3oPZucoMFTd52YbeW5fREaNG6zHNEXMKC1ID9Kz0Nu948JFaLIAaR04XhTia7eQXODPo+TxQ==",
   "success": true,
-  "projectFilePath": "D:\\MyGit\\GatewayJwtDemo\\GatewayJwtDemo\\GatewayJwtDemo\\GatewayJwtDemo.csproj",
+  "projectFilePath": "D:\\MyGit\\Test.Ocelot\\GatewayJwtDemo\\GatewayJwtDemo\\GatewayJwtDemo.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

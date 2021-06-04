@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fyVKYcjbuX7Y2V7qoCGxaukJG8sEJG3D9ruLMasSJ1DPlRJyVEs0pL8odChkqhjbu81dFExmR5Q546eb1Srpbw==",
+  "dgSpecHash": "4d+6Y4Saxn0bWEXgPWJdB3w0BzJbiemdS7IzalpL8Whzfw30JM25IOCmxIMnDu8SRADdNNA3vMuObH4Bg5FRpw==",
   "success": true,
-  "projectFilePath": "D:\\MyGit\\GatewayJwtDemo\\GatewayJwtDemo\\OrderApi\\OrderApi.csproj",
+  "projectFilePath": "D:\\MyGit\\Test.Ocelot\\GatewayJwtDemo\\OrderApi\\OrderApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dev1\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.2.0\\microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",
     "C:\\Users\\dev1\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
