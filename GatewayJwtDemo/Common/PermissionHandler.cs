@@ -48,8 +48,8 @@ namespace Common
         {
             try
             {
-                //调试时可跳过验证
-                if (requirement.OpenJWT != "True")
+                //是否启用jwt验证
+                if (!requirement.OpenJwt)
                 {
                     context.Succeed(requirement);
                     return;

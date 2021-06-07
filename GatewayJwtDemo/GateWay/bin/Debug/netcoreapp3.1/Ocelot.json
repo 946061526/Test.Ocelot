@@ -1,5 +1,5 @@
 {
-  "ReRoutes": [
+  "Routes": [
     // API:user
     {
       "DownstreamPathTemplate": "/api/user/{url}",
@@ -32,7 +32,7 @@
       //"UseServiceDiscovery": true //启用服务发现
     },
     {
-      "DownstreamPathTemplate": "/{url}",
+      "DownstreamPathTemplate": "/api/Auth/{url}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -40,9 +40,9 @@
           "Port": 9001
         }
       ],
-      "UpstreamPathTemplate": "/api/AuthenticationAPI/{url}",
+      "UpstreamPathTemplate": "/api/Auth/{url}",
       "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
-      "ReRouteIsCaseSensitive": true,
+      //"ReRouteIsCaseSensitive": false,
       "HttpHandlerOptions": {
         "UseTracing": true
       },
@@ -50,7 +50,7 @@
         "AuthenticationProviderKey": "Bearer",
         "AllowedScopes": []
       }
-    },
+    }
   ],
   "GlobalConfiguration": {
     "BaseUrl": "http://localhost:9000"

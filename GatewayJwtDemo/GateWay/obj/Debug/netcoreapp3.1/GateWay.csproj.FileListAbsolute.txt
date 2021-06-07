@@ -45,7 +45,6 @@ D:\MyGit\Test.Ocelot\GatewayJwtDemo\GateWay\bin\Debug\netcoreapp3.1\Microsoft.Ex
 D:\MyGit\Test.Ocelot\GatewayJwtDemo\GateWay\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 D:\MyGit\Test.Ocelot\GatewayJwtDemo\GateWay\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
 D:\MyGit\Test.Ocelot\GatewayJwtDemo\GateWay\bin\Debug\netcoreapp3.1\Ocelot.dll
-D:\MyGit\Test.Ocelot\GatewayJwtDemo\GateWay\obj\Debug\netcoreapp3.1\GateWay.csprojAssemblyReference.cache
 D:\MyGit\Test.Ocelot\GatewayJwtDemo\GateWay\obj\Debug\netcoreapp3.1\GateWay.AssemblyInfoInputs.cache
 D:\MyGit\Test.Ocelot\GatewayJwtDemo\GateWay\obj\Debug\netcoreapp3.1\GateWay.AssemblyInfo.cs
 D:\MyGit\Test.Ocelot\GatewayJwtDemo\GateWay\obj\Debug\netcoreapp3.1\GateWay.csproj.CoreCompileInputs.cache
@@ -59,3 +58,6 @@ D:\MyGit\Test.Ocelot\GatewayJwtDemo\GateWay\obj\Debug\netcoreapp3.1\GateWay.cspr
 D:\MyGit\Test.Ocelot\GatewayJwtDemo\GateWay\obj\Debug\netcoreapp3.1\GateWay.dll
 D:\MyGit\Test.Ocelot\GatewayJwtDemo\GateWay\obj\Debug\netcoreapp3.1\GateWay.pdb
 D:\MyGit\Test.Ocelot\GatewayJwtDemo\GateWay\obj\Debug\netcoreapp3.1\GateWay.genruntimeconfig.cache
+D:\MyGit\Test.Ocelot\GatewayJwtDemo\GateWay\bin\Debug\netcoreapp3.1\configuration.json
+D:\MyGit\Test.Ocelot\GatewayJwtDemo\GateWay\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\MyGit\Test.Ocelot\GatewayJwtDemo\GateWay\obj\Debug\netcoreapp3.1\GateWay.csprojAssemblyReference.cache

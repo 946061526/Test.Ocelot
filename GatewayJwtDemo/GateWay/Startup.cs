@@ -27,6 +27,7 @@ namespace GateWay
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddOcelot();
+            //services.AddOcelot(new ConfigurationBuilder().AddJsonFile("Ocelot.json", true, true).Build());
 
             services.AddControllers();
         }
@@ -39,11 +40,12 @@ namespace GateWay
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseOcelot();
+
             app.UseRouting();
 
             app.UseAuthorization();
 
-            app.UseOcelot();
 
             app.UseEndpoints(endpoints =>
             {

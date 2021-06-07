@@ -28,8 +28,11 @@ namespace UserApi
         {
             //读取配置文件，注入OcelotJwt策略
             var audienceConfig = Configuration.GetSection("Audience");
-            services.AddOcelotPolicyJwtBearer(audienceConfig["Issuer"], audienceConfig["Audience"],
-                audienceConfig["Secret"], "Bearer", "AuthJWT", audienceConfig["OpenJWT"]);
+            var Issuer = audienceConfig["Issuer"];
+            var Audience = audienceConfig["Audience"];
+            var Secret = audienceConfig["Secret"];
+            var OpenJWT = Convert.ToBoolean(audienceConfig["OpenJWT"]);
+            services.AddOcelotPolicyJwtBearer(Issuer, Audience, Secret, "Bearer", "AuthJWT", OpenJWT);
 
             services.AddControllers();
         }

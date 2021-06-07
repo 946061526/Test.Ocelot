@@ -28,5 +28,12 @@ namespace OrderApi.Controllers
         {
             return new ApiResult { code = 200, msg = "GetWithOutAuth1 Success!", data = null };
         }
+
+        [HttpPost]
+        [Route("post")]
+        public ActionResult<ApiResult> post()
+        {
+            return new ApiResult { code = 200, msg = "post Success!", data = null };
+        }
     }
 }

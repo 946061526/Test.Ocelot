@@ -1,0 +1,89 @@
+{
+  //Routes:处理上游请求的对象(客户端)，每个数组{}就是配置：上游地址和对应下游地址
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/Auth/{url}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 9001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Auth/{url}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      //"ReRouteIsCaseSensitive": false,
+      "HttpHandlerOptions": {
+        "UseTracing": true
+      }
+    },
+    {
+      //以Downstream开头的，是要转发到下游服务器的地址(userAPIServices)，与nginx转发类似
+      //下面所有Downstream开头的，组成一个转发url,转发地址是http://localhost:9001/api/user
+      "DownstreamPathTemplate": "/api/user/{url}",
+      "DownstreamScheme": "http",
+      // "DownstreamHost": "localhost",
+      // "DownstreamPort": 9001,
+      //转发到下游服务器的主机和端口。
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 9002
+        }
+      ],
+      //Upstream开头是指上游服务器（客户端）访问地址，通过http get方式访问。
+      //也就是说客户端访问http://localhost:9000/user 实际是转发到了http://localhost:9001/api/user的服务
+      "UpstreamPathTemplate": "/api/user/{url}",
+      "UpstreamHttpMethod": [ "Get", "Post" ]
+      //,
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "Bearer",
+      //  "AllowedScopes": []
+      //}
+    },
+    {
+      "DownstreamPathTemplate": "/api/user/{id}",
+      "DownstreamScheme": "http",
+      // "DownstreamHost": "localhost",
+      // "DownstreamPort": 9001,
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 9002
+        }
+      ],
+      "UpstreamPathTemplate": "/user/{id}",
+      "UpstreamHttpMethod": [ "Get", "Post" ]
+      //,
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "Bearer",
+      //  "AllowedScopes": []
+      //}
+    },
+    {
+      "DownstreamPathTemplate": "/api/order/{url}",
+      "DownstreamScheme": "http",
+      // "DownstreamPort": 9002,
+      // "DownstreamHost": "localhost",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 9003
+        }
+      ],
+      "UpstreamPathTemplate": "/api/order/{url}",
+      "UpstreamHttpMethod": [ "Get", "Post" ]
+      //,
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "Bearer",
+      //  "AllowedScopes": []
+      //}
+    }
+  ],
+  //全局配置
+  "GlobalConfiguration": {
+    "RequestIdKey": "OcRequestId",
+    //"AdministrationPath": "/administration",
+    "BaseUrl": "http://localhost:9000"
+  }
+}

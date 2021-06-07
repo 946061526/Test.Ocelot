@@ -131,6 +131,12 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[4.1.1-dev-00227, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

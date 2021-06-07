@@ -6,6 +6,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
 using System.Text;
@@ -15,16 +16,16 @@ namespace AuthenticationAPI.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class AuthenticationAPIController : ControllerBase
+    public class AuthController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
         {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
-        private readonly ILogger<AuthenticationAPIController> _logger;
+        private readonly ILogger<AuthController> _logger;
 
-        public AuthenticationAPIController(ILogger<AuthenticationAPIController> logger)
+        public AuthController(ILogger<AuthController> logger)
         {
             _logger = logger;
         }
@@ -48,16 +49,14 @@ namespace AuthenticationAPI.Controllers
         [Route("login")]
         [AllowAnonymous]
         [HttpPost]
-        public ActionResult<ApiResult> login([FromQuery] Req obj)
+        public ActionResult<ApiResult> login([FromBody] LoginRequest obj)
         {
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-            var _requirement = new PermissionRequirement("Vim", "everyone", creds, "True") { };
+            var _requirement = new PermissionRequirement("Vim", "everyone", creds, true) { };
 
-            string username = obj.UserName.ToString();
+            string username = obj.UserName;
             string userid = obj.UserId.ToString();
-            string OrgId = obj.OrgId.ToString();
-            string OrgName = obj.OrgName.ToString();
             string IsAdmin = obj.IsAdmin.ToString();
             string ClientType = obj.ClientType.ToString();
             //如果是基于用户的授权策略，这里要添加用户;如果是基于角色的授权策略，这里要添加角色
@@ -66,9 +65,14 @@ namespace AuthenticationAPI.Controllers
                     new Claim("clientType",ClientType.ToString()),
                     new Claim("userid",userid),
                     new Claim("jti",Guid.NewGuid().ToString()),
-                    new Claim("orgId",OrgId),
-                    new Claim("orgName",OrgName),
-                    new Claim("isAdmin",IsAdmin)
+                    new Claim("isAdmin",IsAdmin),
+
+
+                    new Claim(ClaimTypes.NameIdentifier,username),
+                    new Claim(ClaimTypes.Role,""),
+                    new Claim(JwtRegisteredClaimNames.Nbf,$"{new DateTimeOffset(DateTime.Now).ToUnixTimeSeconds()}") ,
+                    new Claim (JwtRegisteredClaimNames.Exp,$"{new DateTimeOffset(DateTime.Now.AddMinutes(30)).ToUnixTimeSeconds()}"),
+
                 };
             //用户标识
             var identity = new ClaimsIdentity(JwtBearerDefaults.AuthenticationScheme);
@@ -85,8 +89,6 @@ namespace AuthenticationAPI.Controllers
                     Token = token,
                     UserId = Convert.ToInt32(userid),
                     UserName = username,
-                    OrgId = Convert.ToInt32(OrgId),
-                    OrgName = OrgName,
                     IsAdmin = Convert.ToBoolean(IsAdmin),
                     ClientType = Convert.ToInt32(ClientType)
                 }
@@ -100,13 +102,18 @@ namespace AuthenticationAPI.Controllers
         {
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-            var _requirement = new PermissionRequirement("Vim", "everyone", creds, "True") { };
+            var _requirement = new PermissionRequirement("Vim", "everyone", creds, true) { };
 
             var claims = new Claim[] {
                     new Claim("userName", userName),
                     new Claim("clientType",ClientType.ToString()),
                     new Claim("pwd",pwd),
                     new Claim("jti",Guid.NewGuid().ToString()),
+
+                    new Claim(ClaimTypes.NameIdentifier,userName),
+                    new Claim(ClaimTypes.Role,""),
+                    new Claim(JwtRegisteredClaimNames.Nbf,$"{new DateTimeOffset(DateTime.Now).ToUnixTimeSeconds()}") ,
+                    new Claim (JwtRegisteredClaimNames.Exp,$"{new DateTimeOffset(DateTime.Now.AddMinutes(30)).ToUnixTimeSeconds()}"),
                 };
             //用户标识
             var identity = new ClaimsIdentity(JwtBearerDefaults.AuthenticationScheme);
@@ -128,12 +135,10 @@ namespace AuthenticationAPI.Controllers
         }
     }
 
-    public class Req
+    public class LoginRequest
     {
         public int UserId { get; set; }
         public string UserName { get; set; }
-        public int OrgId { get; set; }
-        public string OrgName { get; set; }
         public string IsAdmin { get; set; }
         public int ClientType { get; set; }
     }

@@ -12,7 +12,7 @@ namespace Common
         /// <summary>
         /// 请求路径
         /// </summary>
-        public string LoginPath { get; set; } = "/api/AuthenticationAPI/Login";
+        public string LoginPath { get; set; } = "/api/Auth/Login";
         /// <summary>
         /// 发行人
         /// </summary>
@@ -27,31 +27,23 @@ namespace Common
         public SigningCredentials SigningCredentials { get; set; }
 
         /// <summary>
-        /// 构造
+        /// 是否启用jwt验证
         /// </summary>
-        /// <param name="deniedAction">无权限action</param>
-        /// <param name="userPermissions">用户权限集合</param>
+        public bool OpenJwt { get; set; }
 
         /// <summary>
         /// 构造
         /// </summary>
-        /// <param name="deniedAction">拒约请求的url</param> 
-        /// <param name="claimType">声明类型</param>
         /// <param name="issuer">发行人</param>
         /// <param name="audience">订阅人</param>
         /// <param name="signingCredentials">签名验证实体</param>
-        public PermissionRequirement(string issuer, string audience, SigningCredentials signingCredentials, string openJWT)
+        public PermissionRequirement(string issuer, string audience, SigningCredentials signingCredentials, bool openJWT)
         {
             Issuer = issuer;
             Audience = audience;
             SigningCredentials = signingCredentials;
-            OpenJWT = openJWT;
+            OpenJwt = openJWT;
         }
-
-        /// <summary>
-        /// 是否启用jwt验证
-        /// </summary>
-        public string OpenJWT { get; set; }
     }
 
 }

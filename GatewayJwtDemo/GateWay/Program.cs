@@ -22,7 +22,9 @@ namespace GateWay
             {
                 builder
                  .SetBasePath(hostingContext.HostingEnvironment.ContentRootPath)
-                 .AddJsonFile("Ocelot.json", true, true);
+                 //.AddJsonFile("Ocelot.json", optional: false, reloadOnChange: true)
+                 .AddJsonFile("configuration.json", false, true)
+                 .AddEnvironmentVariables();
             })
             .ConfigureWebHostDefaults(webBuilder =>
             {

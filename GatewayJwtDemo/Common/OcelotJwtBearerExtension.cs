@@ -65,7 +65,7 @@ namespace Common
         /// <param name="isHttps">是否https</param>
         /// <returns></returns>
         public static AuthenticationBuilder AddOcelotPolicyJwtBearer(this IServiceCollection services,
-            string issuer, string audience, string secret, string defaultScheme, string policyName, string openJWT, bool isHttps = false)
+            string issuer, string audience, string secret, string defaultScheme, string policyName, bool openJWT, bool isHttps = false)
         {
 
             var keyByteArray = Encoding.UTF8.GetBytes(secret);
@@ -84,12 +84,7 @@ namespace Common
 
             };
             var signingCredentials = new SigningCredentials(signingKey, SecurityAlgorithms.HmacSha256);
-            var permissionRequirement = new PermissionRequirement(
-            issuer,
-            audience,
-            signingCredentials,
-            openJWT
-            );
+            var permissionRequirement = new PermissionRequirement(issuer, audience, signingCredentials, openJWT);
             //注入授权Handler
             services.AddSingleton<IAuthorizationHandler, PermissionHandler>();
             services.AddSingleton(permissionRequirement);
@@ -97,7 +92,6 @@ namespace Common
             {
                 options.AddPolicy(policyName,
                 policy => policy.Requirements.Add(permissionRequirement));
-
             })
             .AddAuthentication(options =>
             {
@@ -121,14 +115,8 @@ namespace Common
         public static IServiceCollection AddJTokenBuild(this IServiceCollection services, string issuer, string audience, string secret)
         {
             var signingCredentials = new SigningCredentials(new SymmetricSecurityKey(Encoding.ASCII.GetBytes(secret)), SecurityAlgorithms.HmacSha256);
-            var permissionRequirement = new PermissionRequirement(
-            issuer,
-            audience,
-            signingCredentials,
-            "True"
-            );
+            var permissionRequirement = new PermissionRequirement(issuer, audience, signingCredentials, true);
             return services.AddSingleton(permissionRequirement);
-
         }
 
     }

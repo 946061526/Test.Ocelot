@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System;
 
 namespace AuthenticationAPI
 {
@@ -19,11 +20,15 @@ namespace AuthenticationAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //读取配置文件，注入OcelotJwt策略
             var audienceConfig = Configuration.GetSection("Audience");
+            var Issuer = audienceConfig["Issuer"];
+            var Audience = audienceConfig["Audience"];
+            var Secret = audienceConfig["Secret"];
+            var OpenJWT = Convert.ToBoolean(audienceConfig["OpenJWT"]);
 
-            services.AddJTokenBuild(audienceConfig["Issuer"], audienceConfig["Audience"], audienceConfig["Secret"]);
-            services.AddOcelotPolicyJwtBearer(audienceConfig["Issuer"], audienceConfig["Audience"],
-                audienceConfig["Secret"], "Bearer", "AuthJWT", audienceConfig["OpenJWT"]);
+            services.AddJTokenBuild(Issuer, Audience, Secret);
+            services.AddOcelotPolicyJwtBearer(Issuer, Audience, Secret, "Bearer", "AuthJWT", OpenJWT);
 
             services.AddControllers();
         }
